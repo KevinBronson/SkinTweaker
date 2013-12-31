@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<jQueryScriptConfig>
+<Options>
+<ChangeAllButtons>False</ChangeAllButtons>
+<FillInCalendars>True</FillInCalendars>
+<FillInBoxes>True</FillInBoxes>
+<AutoCompleteFix>True</AutoCompleteFix>
+</Options>
+<Statements>
+<Statement>
+<ID>Statement2</ID>
+<SelectorType>3</SelectorType>
+<SelectorName>button</SelectorName>
+<PluginName>button</PluginName>
+<PluginParameters></PluginParameters>
+</Statement>
+</Statements>
+<StatementControlsToPersist>1,2</StatementControlsToPersist>
+</jQueryScriptConfig>

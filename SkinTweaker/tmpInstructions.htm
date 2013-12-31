@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <p>
+        INSTALLATION</p>
+    <p>
+        For &#39;how to&#39; videos, please visit <a href="http://www.youtube.com/user/dotnetnuke/featured"
+            target="_blank">DotNetNuke&#39;s YouTube Channel</a> which has instructional
+        videos on a number of topics.</p>
+    <h3>
+        Links to Installation Videos</h3>
+    <ul>
+        <li>DotNetNuke 6: <a href="http://www.youtube.com/watch?v=MtseXLm0PBY" target="_blank">
+            Installing an Extension using the Wizard in DotNetNuke 6</a></li>
+        <li>Older Versions: <a href="http://www.youtube.com/watch?v=yQ9WHVsm1mg&amp;feature=plcp">
+            Installing a Module (extension) in DotNetNuke</a></li>
+    </ul>
+    <p>
+        Please refer to <a href="http://www.dotnetnuke.com/Resources/Manuals.aspx" target="_blank">
+            DotNetNuke&#39;s documentation</a> for more detailed information on how to install
+        Extensions / Modules for your particular version of DotNetNuke.</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        SETUP</p>
+    <p>
+        This section will explain how to add and configure the SkinTweaker module to a page
+        once it has been installed. Again, please refer to <a href="http://www.dotnetnuke.com/Resources/Manuals.aspx"
+            target="_blank">DotNetNuke&#39;s documentation</a> for more detailed information
+        on your particular version of DotNetNuke.</p>
+    <h3>
+        Instructions for DotNetNuke 6</h3>
+    <ol>
+        <li>Create the page that you want SkinTweaker to be added to. Don&#39;t install any
+            other modules on this page.</li>
+        <li>Add the SkinTweaker Module to the page.</li>
+        <li>You will find that 2 modules have been placed on the same page. One is named &#39;SkinTweaker 
+            Admin&#39;
+            and the other is named &#39;SkinTweaker Injector&#39;.</li>
+        <li>Open settings for the SkinTweaker Admin module.</li>
+        <li>Go to Page Settings &gt; Basic Settings. Select &#39;Host: DarkKnight - Invisible&#39;
+            for Module Container (You can try other containers if you wish, but this one is known to work).</li>
+        <li>Click Update</li>
+        <li>Open settings for the SkinTweaker Injector module.</li>
+        <li>Again, go to Page Settings &gt; Basic Settings. Select &#39;Host: DarkKnight - Invisible&#39; 
+            for Module Container
+            (You can try other containers if you wish, but this one is known to work).</li>
+        <li>Go to Module Settings &gt; Advanced Settings. Select the option &#39;Display Module On 
+            All Pages?&#39;</li>
+        <li>Click Update.</li>
+        <li>Delete the module (&#39;SkinTweaker Injector&#39;) that you just updated. This is
+            done because you want to have the injector on every page EXCEPT for the SkinTweaker
+            page, because the modules will interfere with each other.</li>
+        <li>Go to Host &gt; Settings &gt; Advanced Settings &gt; jQuery Settings. Check the option 
+            &#39;Use Hosted jQuery Version?&#39;</li>
+    </ol>
+    <h3>
+        Instructions for DotNetNuke 5?</h3>
+    <ol>
+        <li></li>
+    </ol>
+    <p>
+        &nbsp;</p>
+        <h3>
+    Final Instructions for All Versions of DotNetNuke</h3>
+    <ol>
+        <li>Go to the newly installed SkinTweaker page.</li>
+        <li>On the left side of the screen you will see the &#39;Naviagtion Panel&#39;. Find and 
+            click &#39;Advanced Settings&#39;.</li>
+        <li>Look for the section called &#39;Bug Hunter&#39;.</li>
+        <li>Click &#39;Kill All Bugs&#39;.</li>
+    </ol>
+    <p>
+        That&#39;s it. Now you are ready to start using SkinTweaker.</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        UNINSTALL</p>
+    <p>
+        If you wish to uninstall SkinTweaker, then you will likely want to restore any 
+        changes made by Bug Hunter. Once finished, you can uninstall the modules.</p>
+    <h3>
+        Restore Files Changed by Bug Hunter (Optional)</h3>
+    <ol>
+        <li>Goto Navigation Panel&#39;s &#39;Advanced Settings&#39; page.</li>
+        <li>Find Bug Hunter.</li>
+        <li>Click &#39;RESTORE SYSTEM&#39;</li>
+    </ol>
+    <h3>
+        Uninstall the SkinTweaker Modules</h3>
+    <p>
+        The standard uninstall process will remove the injector modules from all pages 
+        as well as the SkinTweaker module itself.
+        Please refer to <a href="http://www.dotnetnuke.com/Resources/Manuals.aspx" target="_blank">
+            DotNetNuke&#39;s documentation</a> for more detailed information on how to 
+        uninstall
+        Extensions / Modules for your particular version of DotNetNuke.</p>
+    <h3>
+        OOPS! I forgot to use Bug Hunter&#39;s &#39;RESTORE SYSTEM&#39; before I uninstalled.</h3>
+    <p>
+        No problem. Just reinstall SkinTweaker and then redo the uninstall process.</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+    </body>
+</html>

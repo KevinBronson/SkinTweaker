@@ -1,0 +1,14 @@
+﻿<h3>
+    SkinTweaker</h3>
+<div style="color: Red;">
+    <h4>
+        NOTICE:</h4>
+    <p>
+        All documentation is online. For installation and setup instructions, please visit
+        skintweaker.com or click:
+    </p>
+    <p>
+        <a href="http://www.skintweaker.com/Help/Installation.aspx" target="_blank"
+            title="Click here for installation and setup instructions.">Installation And Setup
+            Instructions</a></p>
+</div>

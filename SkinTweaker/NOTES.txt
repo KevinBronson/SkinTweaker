@@ -1,0 +1,26 @@
+===============================================================================
+								NOTES
+===============================================================================
+
+
+
+
+
+
+
+
+
+
+
+===============================================================================
+							SETTINGS / INSTRUCTIONS
+===============================================================================
+
+must update settings under Host Settings > Advanced Settings > jQuery Settings
+Change the jQuery versions as needed to work with your jQuery Themes
+Be sure to check "Used Hosted jQuery Version" so that it doesn't use the internal one.
+
+When downloading theme make sure that a period is before the scope name or else
+  the jQuery site will screw up the download.
+
+

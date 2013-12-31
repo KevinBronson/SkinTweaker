@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<jQueryScriptConfig>
+<Options>
+<ChangeAllButtons>False</ChangeAllButtons>
+<FillInCalendars>False</FillInCalendars>
+<FillInBoxes>False</FillInBoxes>
+<AutoCompleteFix>True</AutoCompleteFix>
+</Options>
+<Statements>
+</Statements>
+<StatementControlsToPersist></StatementControlsToPersist>
+</jQueryScriptConfig>

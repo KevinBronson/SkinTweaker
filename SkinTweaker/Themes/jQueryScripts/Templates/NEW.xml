@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<jQueryScriptConfig>
+  <Options>
+    <ChangeAllButtons>False</ChangeAllButtons>
+  </Options>
+  <Statements>
+  </Statements>
+  <StatementControlsToPersist></StatementControlsToPersist>
+  <CustomScript></CustomScript>
+</jQueryScriptConfig>

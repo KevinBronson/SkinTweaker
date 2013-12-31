@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>ITM Template</title>
+    <link rel="stylesheet" type="text/css" href="Documentation.css" />
+</head>
+<body>
+    <div style="width: 1000px; margin: 0 auto 0 auto;">
+        <h1>
+            ITM OfferPostingSystem Module</h1>
+        <hr />
+        <h2>
+            * Important *</h2>
+        <p>
+            When creating a project using this template, you should have named your project
+            simply "ModuleName", not "ITMModuleName". If you didn&#39;t do this, the easiest
+            thing to do is close the solution, delete the folder from your DesktopModules folder,
+            then create a new project.</p>
+        <p>
+            Due to limitations in the templating capabilities of Visual Studio, you will need
+            to make some minor changes, and double check a few things, before you package this
+            module.</p>
+        <ol>
+            <li><strong style="font-weight: bold; font-style: none">BEFORE</strong> checking the
+                module into your source control environment check the following.</li>
+            <li>Edit the Project properties by double-clicking on the Properties folder in Solution
+                Explorer</li>
+            <li>On the Application tab:
+                <ol>
+                    <li>Make sure the Assembly name textbox is set to "OfferPostingSystem".</li>
+                    <li>Make sure the Default namespace is set to "OfferPostingSystem".</li>
+                </ol>
+            </li>
+            <li>On the Web tab:
+                <ol>
+                    <li>Under 'Start Action', make sure to set your Start URL to the correct site (ex: http://dnndev/).</li>
+                    <li>Under 'Servers', make sure to "Use IIS Web Server" with a project url of http://dnndev/desktopmodules/OfferPostingSystem
+                        and an Override application root URL of http://dnndev/</li>
+                </ol>
+            </li>
+        </ol>
+        <h2>
+            Steps after your project is setup.</h2>
+        <ol>
+            <li>To Build and Package your Module you need to change to <b>Release</b> mode and then
+                simply choose Build from the Build menu. The MSBuild scripts will do the packaging
+                process for you. The packaging process creates an INSTALL and a SOURCE package in
+                the PACKAGES folder within your desktopmodule/modulename folder. </li>
+            <li>Installing your module in your development DotNetNuke instance is easy.Take the
+                SOURCE ZIP file that is created in the Packages folder, upload that using the Host/Extensions
+                page, Installation Wizard. </li>
+            <li>After you've done a release for your module (typically deploying to an environment
+                outside of your development environment) you should change the Version number, you
+                need to do this in two places, the assemblyinfo file, and the .DNN manifest file.
+                Next time you build the module in release mode you will get a new package (using
+                the version number) created.</li>
+            <li>For more information visit our <a href="http://www.dotnetnuke.com/Resources/Training.aspx">
+                DotNetNuke Training page</a>.</li>
+        </ol>
+        <p>
+            After you are finished with the Documentation you can delete the Documentation directory
+            from your project.
+        </p>
+        <hr />
+        <h2 style="color: #FF0000">
+            UPDATED</h2>
+        <p>
+            March 10, 2012 This project template has been customized for ITM.
+        </p>
+        <p>
+            Has been customized for use with:
+        </p>
+        <ul>
+            <li>DotNetNuke 6.0</li>
+            <li>Visual Studio 2010</li>
+            <li>Support for ADO.NET Entity Framework</li>
+            <li>ASP.NET 4.0 & Integrated Managed Pipeline Mode</li>
+        </ul>
+        <h3>
+            Known Bugs</h3>
+        <ul>
+            <li><b>Page_Load Fires Twice.</b> Sometimes "Handles MyBase.Load, Me.Load" will be at
+                the end of the Page_Load function which will cause it to fire twice. To fix it just,
+                just delete ", Me.Load". <a href="http://www.dotnetnuke.com/Resources/Forums/forumid/-1/threadid/240763/scope/posts/threadpage/2.aspx"
+                    target="_blank">Cleck here for more information.</a> </li>
+        </ul>
+        <h3>
+            Working with the ADO.NET Entity Framework</h3>
+        <p>
+            The main thing to keep in mind when working with this model is that every module
+            on a DNN site must have it's own ADO.NET Entity Data Model connection string in
+            the website's root web.config file. Not only that, but each module's Entity Data
+            Model internal name must be different! So remember those 2 things:
+        </p>
+        <ol>
+            <li>Different Entity Data Model connection strings in root web.config (the normal db
+                connection string can be shared)</li>
+            <li>Different internal names for Entity Data Models (i.e. OfferPostingSystemEModel.edmx)</li>
+        </ol>
+        <p>
+            Here is a walk through for creating a new Entity Data Model in Visual Studio 2010:
+        </p>
+        <ol>
+            <li>Right click on the project name or a folder in Solution Explorer</li>
+            <li>Add > New Item...</li>
+            <li>Select Web > ADO.NET Entity Data Model</li>
+            <li>Change to to something like ProjectNameEModel (i.e. OfferPostingSystemEModel)</li>
+            <li>Click Add</li>
+            <li>Select 'Generate from database' and then click Next</li>
+            <li>Select the appropriate connection string (i.e. ITMdbDefaultConnection)</li>
+            <li>Make sure 'Save entity connection settings in web.config' is checked</li>
+            <li>Enter a unique name for entity connection settings like ProjectNameEModel (i.e.
+                OfferPostingSystemEModel)</li>
+            <li>Select tables and stuff that you want</li>
+            <li>Change Model Namespace to something unique like ProjectNameEModelNamespace (i.e.
+                OfferPostingSystemEModelNamespace)</li>
+            <li>Click Finish</li>
+            <li>Build the project in release mode</li>
+            <li>Copy the new Entities connection string from the web.config in the project to the
+                website's root web.config file.</li>
+            <li>Now you can use Entity Data Sources in your controls.</li>
+        </ol>
+        <p>
+            <em>I have inculded the .dll and .pdb files for <a href="http://dnnentityframework.codeplex.com/"
+                target="_blank">Brandon Haynes' DotNetNuke Entity Framework Model Adapter</a> and
+                referenced them. Use of the adaptor is optional.</em>
+        </p>
+        <h2>
+            Customizing Visual Studio Project Templates</h2>
+        <p>
+            You can make a custom project template to add to Visual Studio's list of templates
+            that you see when you click 'File > New Project...'.</p>
+        <p>
+            The files that Visual Studio loads for this project templates like this are located
+            in:</p>
+        <span style="font-family: 'Courier New', Courier, monospace; font-size: 16px;">C:\Users\User\Documents\Visual
+            Studio 2010\Templates\ProjectTemplates\Visual Basic\Web</span>
+        <p>
+            The original project template file that I used to create this one is "DotNetNuke VB Compiled Module.zip". 
+            You can copy and modify the files inside of one of these zip files to create you own custom version.
+        </p>
+        <p>
+            The following is a list of the key files that contain project variables, scripts,
+            and file management information for creating, compiling and packaging the project.
+        </p>
+        <ol>
+            <li>DotNetNuke VB Compiled Module.vstemplate</li>
+            <li>ModuleName.vbproj</li>
+            <li>AssemblyInfo.vb</li>
+            <li>ModuleName.dnn (This is the DNN manisfest file)</li>
+            <li>BuildScripts/ModulePackage.targets (NOT BuildScripts/MSBuild.Community.Tasks.Targets)</li>
+        </ol>
+        <p><a href="http://christoctemplate.codeplex.com/">Clic here for more information.</a></p>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+</body>
+</html>

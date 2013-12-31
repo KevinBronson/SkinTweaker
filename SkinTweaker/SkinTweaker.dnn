@@ -1,0 +1,128 @@
+<dotnetnuke type="Package" version="5.0">
+  <packages>
+    <package name="SkinTweaker" type="Module" version="1.00.00">
+      <friendlyName>SkinTweaker</friendlyName>
+      <description>SkinTweaker is a handy tool for customizing the look and feel of DotNetNuke websites.</description>
+      <iconFile>/DesktopModules/SkinTweaker/images/ST_48x48.png</iconFile>
+      <owner>
+        <name>SkinTweaker.com</name>
+        <organization>Sole Proprietorship</organization>
+        <url>http://www.skintweaker.com</url>
+        <email>admin@skintweaker.com</email>
+      </owner>
+      <license src="License.htm"/>
+      <releaseNotes src="ReleaseNotes.txt" />
+
+      <dependencies>
+        <dependency type="CoreVersion">05.00.00</dependency>
+      </dependencies>
+
+      <components>
+        <component type="Script">
+          <scripts>
+            <basePath>DesktopModules\SkinTweaker</basePath>
+            <script type="Install">
+              <path>Providers\DataProviders\SqlDataProvider</path>
+              <name>00.00.01.SqlDataProvider</name>
+              <version>00.00.01</version>
+            </script>
+            <script type="UnInstall">
+              <path>Providers\DataProviders\SqlDataProvider</path>
+              <name>Uninstall.SqlDataProvider</name>
+              <version>00.00.01</version>
+            </script>
+          </scripts>
+        </component>
+
+        <component type="ResourceFile">
+          <resourceFiles>
+            <basePath>DesktopModules/SkinTweaker</basePath>
+            <resourceFile>
+              <name>Resources.zip</name>
+            </resourceFile>
+          </resourceFiles>
+        </component>
+
+        <component type="Module">
+          <desktopModule>
+            <moduleName>SkinTweaker</moduleName>
+            <foldername>SkinTweaker</foldername>
+            <businessControllerClass>SkinTweaker.Components.FeatureController</businessControllerClass>
+            <supportedFeatures />
+            <moduleDefinitions>
+
+              <moduleDefinition>
+                <friendlyName>SkinTweaker Admin</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>DesktopModules/SkinTweaker/View.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile>/DesktopModules/SkinTweaker/images/ST_48x48.png</iconFile>
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                  <moduleControl>
+                    <controlKey>Edit</controlKey>
+                    <controlSrc>DesktopModules/SkinTweaker/Edit.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle>Edit Content</controlTitle>
+                    <controlType>Edit</controlType>
+                    <iconFile>/DesktopModules/SkinTweaker/images/ST_48x48.png</iconFile>
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                  <moduleControl>
+                    <controlKey>Settings</controlKey>
+                    <controlSrc>DesktopModules/SkinTweaker/Settings.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle>SkinTweaker Settings</controlTitle>
+                    <controlType>Edit</controlType>
+                    <iconFile>/DesktopModules/SkinTweaker/images/ST_48x48.png</iconFile>
+                    <helpUrl />
+                    <viewOrder>1</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+
+              <moduleDefinition>
+                <friendlyName>SkinTweaker Injector</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>DesktopModules/SkinTweaker/Injector.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile>/DesktopModules/SkinTweaker/images/ST_48x48.png</iconFile>
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+
+        <component type="Assembly">
+          <assemblies>
+            <basePath>bin</basePath>
+            <assembly>
+              <name>SkinTweaker.dll</name>
+            </assembly>
+            <assembly>
+              <path>bin</path>
+              <name>Ionic.Zip.dll</name>
+              <version>1.9.1.8</version>
+            </assembly>
+          </assemblies>
+        </component>
+      </components>
+    </package>
+  </packages>
+</dotnetnuke>
